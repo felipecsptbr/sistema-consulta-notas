@@ -1,0 +1,114 @@
+╔══════════════════════════════════════════════════════════════════╗
+║         🎓 SISTEMA DE CONSULTA DE NOTAS - DEPLOY PRONTO          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✅ Projeto preparado para deploy no Streamlit Cloud!
+
+📁 ESTRUTURA DO PROJETO
+┣━━ 📄 Home.py                 → Página inicial (menu de seleção)
+┣━━ 📁 pages/
+┃   ┣━━ app_simples.py         → Consulta de notas (alunos)
+┃   ┗━━ admin_web.py           → Painel administrativo
+┣━━ 📄 database.py             → Gerenciamento SQLite
+┣━━ 📄 utils.py                → Processamento de PDFs
+┣━━ 📄 requirements.txt        → Dependências Python
+┣━━ 📄 .gitignore             → Arquivos ignorados
+┣━━ 📁 .streamlit/
+┃   ┗━━ config.toml           → Configurações do app
+┣━━ 📄 DEPLOY.md              → Guia completo de deploy
+┗━━ 📄 deploy.ps1             → Script automático de deploy
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 COMO FAZER O DEPLOY
+
+PASSO 1: Criar Repositório no GitHub
+  1. Acesse: https://github.com/new
+  2. Nome: sistema-consulta-notas
+  3. Visibilidade: Public
+  4. Clique em "Create repository"
+  5. Copie a URL do repositório (ex: https://github.com/usuario/sistema-consulta-notas.git)
+
+PASSO 2: Enviar Código
+  Opção A - Script Automático:
+    .\deploy.ps1
+    
+  Opção B - Manual:
+    git remote add origin https://github.com/SEU_USUARIO/sistema-consulta-notas.git
+    git branch -M main
+    git push -u origin main
+
+PASSO 3: Deploy no Streamlit Cloud
+  1. Acesse: https://share.streamlit.io
+  2. Login com GitHub
+  3. Clique "New app"
+  4. Selecione o repositório: sistema-consulta-notas
+  5. Branch: main
+  6. Main file: Home.py
+  7. Clique "Deploy!"
+  8. Aguarde 2-3 minutos
+
+═══════════════════════════════════════════════════════════════════
+
+🌐 URLS APÓS O DEPLOY
+
+Home (Menu):           https://seu-app.streamlit.app
+Consulta Aluno:        https://seu-app.streamlit.app/app_simples
+Painel Admin:          https://seu-app.streamlit.app/admin_web
+
+═══════════════════════════════════════════════════════════════════
+
+📦 FUNCIONALIDADES
+
+ÁREA DO ALUNO
+  ✓ Seleção de turma
+  ✓ Consulta por matrícula
+  ✓ Visualização de notas em cards
+  ✓ Gráfico de desempenho
+  ✓ Design responsivo
+
+ÁREA ADMINISTRATIVA
+  ✓ Upload de PDFs (formato SEREDUC)
+  ✓ Cadastro de turmas
+  ✓ Listagem de alunos
+  ✓ Exportação para CSV
+  ✓ Dashboard com estatísticas
+  ✓ Remoção de turmas
+
+═══════════════════════════════════════════════════════════════════
+
+⚠️  IMPORTANTE
+
+1. Banco de Dados
+   - SQLite é volátil no Streamlit Cloud
+   - Dados serão perdidos em cada redeploy
+   - Para produção, considere PostgreSQL/MySQL em nuvem
+
+2. Primeira Execução
+   - Acesse o painel admin
+   - Faça upload de um PDF com notas
+   - Os alunos poderão consultar imediatamente
+
+3. Atualizações
+   - git add .
+   - git commit -m "mensagem"
+   - git push
+   - Streamlit Cloud fará redeploy automático
+
+═══════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTAÇÃO
+
+README.md       → Visão geral do projeto
+DEPLOY.md       → Guia detalhado de deploy
+requirements.txt → Dependências necessárias
+
+═══════════════════════════════════════════════════════════════════
+
+✅ TUDO PRONTO!
+
+Execute .\deploy.ps1 e siga as instruções!
+
+Seu sistema estará online em minutos! 🚀
+
+═══════════════════════════════════════════════════════════════════

@@ -1,19 +1,40 @@
+# Arquivos Python
 *.pyc
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Bancos de dados - NUNCA COMMITAR!
 *.db
 *.sqlite
 *.sqlite3
+sistema_notas.db
+
+# Arquivos com dados sensíveis
+*.pdf
+*notas*.pdf
+*Notas*.pdf
+exemplo_notas.txt
+*.csv
+
+# Arquivos de ambiente
 .env
+.env.local
 .venv
 venv/
 ENV/
+
+# Arquivos do sistema
 .DS_Store
 .vscode/
 *.log
-debug_pdf.py
-testar_pdf.py
-verificar_dados.py
+
+# Scripts de teste/debug
+debug_*.py
+testar_*.py
+verificar_*.py
 admin.py
-exemplo_notas.txt
 ler_pdf.py
+
+# Pasta pages antiga
 pages/

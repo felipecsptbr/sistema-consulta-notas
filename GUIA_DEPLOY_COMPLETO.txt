@@ -1,0 +1,178 @@
+═══════════════════════════════════════════════════════════════════
+🚀 DEPLOY NO STREAMLIT CLOUD - PASSO A PASSO
+═══════════════════════════════════════════════════════════════════
+
+Seu código está pronto! Siga estes passos para colocar online:
+
+═══════════════════════════════════════════════════════════════════
+PASSO 1: VERIFICAR/FAZER PUSH PARA GITHUB
+═══════════════════════════════════════════════════════════════════
+
+O código já está commitado. Agora você precisa fazer push.
+
+Se você JÁ TEM um repositório no GitHub:
+  
+  Execute:
+    git remote set-url origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+    git push -u origin main
+
+Se você NÃO TEM um repositório ainda:
+
+  1. Acesse: https://github.com/new
+  
+  2. Preencha:
+     Nome: sistema-consulta-notas
+     Descrição: Sistema de Consulta de Notas Acadêmicas
+     ☑️ Public (para usar Streamlit Cloud grátis)
+     ❌ NÃO marque "Add a README"
+  
+  3. Clique em "Create repository"
+  
+  4. Na tela seguinte, copie a URL que aparece
+     (algo como: https://github.com/usuario/sistema-consulta-notas.git)
+  
+  5. Execute no PowerShell:
+     git remote set-url origin https://github.com/SEU_USUARIO/sistema-consulta-notas.git
+     git push -u origin main
+  
+  6. Digite suas credenciais do GitHub quando solicitado
+
+═══════════════════════════════════════════════════════════════════
+PASSO 2: DEPLOY NO STREAMLIT CLOUD
+═══════════════════════════════════════════════════════════════════
+
+1. Acesse: https://share.streamlit.io
+
+2. Clique em "Sign in" (canto superior direito)
+   → Escolha "Continue with GitHub"
+   → Autorize o Streamlit a acessar seus repositórios
+
+3. Clique no botão "New app" (ou "Create app")
+
+4. Preencha o formulário:
+
+   Repository: 
+   └─ Selecione: seu-usuario/sistema-consulta-notas
+
+   Branch:
+   └─ Digite: main
+
+   Main file path:
+   └─ Digite: Home.py
+
+   App URL (opcional):
+   └─ Deixe o padrão ou escolha um nome personalizado
+      Ex: sistema-notas-sua-escola
+
+5. Clique em "Deploy!"
+
+6. AGUARDE 2-5 MINUTOS
+   - O Streamlit vai:
+     ✓ Clonar seu repositório
+     ✓ Instalar dependências (requirements.txt)
+     ✓ Iniciar o aplicativo
+   
+   - Você verá os logs aparecendo na tela
+
+7. PRONTO! 🎉
+   Seu app estará disponível em:
+   https://seu-app-nome.streamlit.app
+
+═══════════════════════════════════════════════════════════════════
+COMO VAI FUNCIONAR
+═══════════════════════════════════════════════════════════════════
+
+URL Base: https://seu-app.streamlit.app
+  └─ Página inicial com 2 botões:
+     • 👨‍🎓 Área do Aluno
+     • 🔧 Administração
+
+Quando clicar em "Área do Aluno":
+  └─ Abre: https://seu-app.streamlit.app/app_simples
+     Interface para consultar notas
+
+Quando clicar em "Administração":
+  └─ Abre: https://seu-app.streamlit.app/admin_web
+     Painel para fazer upload de PDFs
+
+═══════════════════════════════════════════════════════════════════
+PRIMEIRA CONFIGURAÇÃO APÓS DEPLOY
+═══════════════════════════════════════════════════════════════════
+
+1. Acesse o painel admin:
+   https://seu-app.streamlit.app/admin_web
+
+2. Vá na aba "Cadastrar Turma"
+
+3. Faça upload do seu PDF com as notas
+
+4. Pronto! Os alunos já podem consultar
+
+═══════════════════════════════════════════════════════════════════
+GERENCIAR SEU APP NO STREAMLIT CLOUD
+═══════════════════════════════════════════════════════════════════
+
+Após o deploy, você pode:
+
+• Ver Logs: Canto inferior direito → "Manage app" → "Logs"
+• Reiniciar: "Manage app" → "Reboot app"
+• Atualizar: Só fazer push no GitHub que atualiza automático
+• Excluir: "Manage app" → "Delete app"
+
+═══════════════════════════════════════════════════════════════════
+COMANDOS ÚTEIS
+═══════════════════════════════════════════════════════════════════
+
+Para atualizar o app depois:
+
+  git add .
+  git commit -m "Descrição da mudança"
+  git push
+
+  → O Streamlit detecta e faz redeploy automático!
+
+═══════════════════════════════════════════════════════════════════
+PROBLEMAS COMUNS
+═══════════════════════════════════════════════════════════════════
+
+❌ "Repository not found"
+   → Verifique se o repositório é público
+   → Re-autorize o Streamlit no GitHub
+
+❌ "Module not found"
+   → Verifique se está no requirements.txt
+   → Reboot o app
+
+❌ "Database is locked"
+   → Normal no SQLite
+   → Reboot o app se persistir
+
+❌ App está lento
+   → Streamlit Cloud grátis tem recursos limitados
+   → Normal para processamento de PDFs grandes
+
+═══════════════════════════════════════════════════════════════════
+✅ CHECKLIST FINAL
+═══════════════════════════════════════════════════════════════════
+
+☐ Código commitado no Git
+☐ Repositório criado no GitHub
+☐ Push feito com sucesso
+☐ Conta criada no Streamlit Cloud
+☐ App deployado
+☐ URL funcionando
+☐ PDF de teste carregado
+☐ Consulta de aluno testada
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 PRÓXIMO PASSO:
+
+Execute no PowerShell (substitua com sua URL do GitHub):
+
+  git remote set-url origin https://github.com/SEU_USUARIO/REPO.git
+  git push -u origin main
+
+Depois acesse: https://share.streamlit.io
+
+═══════════════════════════════════════════════════════════════════

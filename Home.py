@@ -45,7 +45,7 @@ with col1:
     """, unsafe_allow_html=True)
     
     if st.button("🔍 Consultar Notas", key="aluno", use_container_width=True, type="primary"):
-        st.switch_page("pages/app_simples.py")
+        st.switch_page("pages/1_Consulta_Aluno.py")
 
 with col2:
     st.markdown("""
@@ -57,7 +57,7 @@ with col2:
     """, unsafe_allow_html=True)
     
     if st.button("⚙️ Painel Admin", key="admin", use_container_width=True):
-        st.switch_page("pages/admin_web.py")
+        st.switch_page("pages/2_Painel_Admin.py")
 
 st.markdown("---")
 st.markdown("""

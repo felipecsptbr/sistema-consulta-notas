@@ -1,11 +1,12 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Sistema de Notas",
+    page_title="Sistema de Consulta de Notas",
     page_icon="🎓",
     layout="centered"
 )
 
+# CSS customizado
 st.markdown("""
     <style>
     .stApp {
@@ -21,9 +22,19 @@ st.markdown("""
         margin: 2rem auto;
         max-width: 600px;
     }
+    
+    .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 1rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
     </style>
 """, unsafe_allow_html=True)
 
+# Título principal
 st.markdown("""
 <div class='main-card'>
     <h1>🎓 Sistema de Consulta de Notas</h1>
@@ -33,32 +44,34 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# Opções
 col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-    <div style='background: white; padding: 2rem; border-radius: 15px; margin: 1rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);'>
+    <div class='card'>
         <h2>👨‍🎓</h2>
         <h3>Área do Aluno</h3>
         <p style='color: #666;'>Consulte suas notas</p>
     </div>
     """, unsafe_allow_html=True)
     
-    if st.button("🔍 Consultar Notas", key="aluno", use_container_width=True, type="primary"):
+    if st.button("🔍 Consultar Notas", key="aluno", type="primary"):
         st.switch_page("pages/1_Consulta_Aluno.py")
 
 with col2:
     st.markdown("""
-    <div style='background: white; padding: 2rem; border-radius: 15px; margin: 1rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);'>
+    <div class='card'>
         <h2>🔧</h2>
         <h3>Administração</h3>
         <p style='color: #666;'>Gerenciar turmas</p>
     </div>
     """, unsafe_allow_html=True)
     
-    if st.button("⚙️ Painel Admin", key="admin", use_container_width=True):
+    if st.button("⚙️ Painel Admin", key="admin"):
         st.switch_page("pages/2_Painel_Admin.py")
 
+# Footer
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: white; padding: 1rem;'>
